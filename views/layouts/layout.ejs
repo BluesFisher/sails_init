@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sail Init</title>
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover" />
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+
+    <script src="//yiliao-1254237151.cos.ap-shanghai.myqcloud.com/healthcard/raven.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        if (window.Raven) {
+          window.Raven.config('https://b61abe8131f74cb09330266225caba4f@report.url.cn/sentry/203', {
+            environment: environment
+          }).install();
+        }
+
+        var mta = document.createElement('script');
+        mta.src = '//pingjs.qq.com/h5/stats.js?v2.0.4';
+        mta.setAttribute('name', 'MTAH5');
+        mta.setAttribute('sid', '');
+        mta.setAttribute('cid', '');
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(mta, s);
+      })();
+    </script>
+  </head>
+
+  <body>
+    <%- body %>
+
+    <!--SCRIPTS-->
+    <script src="/dependencies/sails.io.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>
